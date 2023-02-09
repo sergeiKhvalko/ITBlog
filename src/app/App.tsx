@@ -5,12 +5,13 @@ import { AboutPage } from '@/pages/AboutPage'
 import { MainPage } from '@/pages/MainPage'
 import Elipses from '@/shared/Elipses/Elipses'
 import { useTheme } from '@/shared/contexts'
+import { cn } from '@/shared/lib/cn/cn'
 
 const App = () => {
 	const { theme, toggleTheme } = useTheme();
 	
 	return (
-		<div className={`app ${theme}`}>
+		<div className={cn('app', {}, [theme])}>
 			<Elipses />
 
 			<button onClick={toggleTheme}>Change Theme</button>
