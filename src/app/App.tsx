@@ -3,10 +3,17 @@ import { Route, Routes, Link } from 'react-router-dom'
 import './styles/index.scss'
 import { AboutPage } from '@/pages/AboutPage'
 import { MainPage } from '@/pages/MainPage'
+import Elipses from '@/shared/Elipses/Elipses'
+import { useTheme } from '@/shared/contexts'
 
 const App = () => {
+	const { theme, toggleTheme } = useTheme();
+	
 	return (
-		<div className="app">
+		<div className={`app ${theme}`}>
+			<Elipses />
+
+			<button onClick={toggleTheme}>Change Theme</button>
 
 			<Link to={'/'}>MainPage</Link>
 			<Link to={'/about'}>AboutPage</Link>

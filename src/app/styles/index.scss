@@ -1,6 +1,8 @@
 @import "reset";
 @import "fonts/fonts";
 @import "variables/global";
+@import "./themes/dark";
+@import "./themes/light";
 
 body {
 	min-width: 320px;
@@ -16,30 +18,4 @@ body {
 
 	min-height: 100vh;
 	overflow: hidden;
-}
-
-.elipse {
-	position: absolute;
-	width: 30%;
-	height: 20%;
-	filter: blur(166.592px);
-	transform: rotate(-39.28deg);
-}
-
-.elipse1 {
-	left: -54px;
-	top: 157.8px;
-	background: var(--elips1-bg);
-}
-
-.elipse2 {
-	left: 50%;
-	bottom: -220px;
-	background: var(--elips2-bg);
-}
-
-.elipse3 {
-	right: -220px;
-	top: 675.8px;
-	background: var(--elips3-bg);
 }
