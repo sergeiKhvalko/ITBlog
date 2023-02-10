@@ -4,19 +4,18 @@ import Elipses from '@/shared/Elipses/Elipses'
 import { useTheme } from '@/shared/contexts'
 import { cn } from '@/shared/lib/cn/cn'
 import { AppRouter } from './provider/router/AppRouter'
+import { Navbar } from '@/widgets/Navbar'
 
 const App = () => {
-	const { theme, toggleTheme } = useTheme();
+	const { theme } = useTheme();
 	
 	return (
-		<div className={cn('app', {}, [theme])}>
+		<div className={cn('app', [theme])}>
 			<Elipses />
 
-			<button onClick={toggleTheme}>Change Theme</button>
-
-			<Link to={'/'}>MainPage</Link>
-			<Link to={'/about'}>AboutPage</Link>
 			
+			
+			<Navbar />
 			<AppRouter />
 			
 		</div>
