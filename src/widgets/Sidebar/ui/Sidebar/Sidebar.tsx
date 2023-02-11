@@ -1,8 +1,9 @@
 import { cn } from '@/shared/lib/cn/cn';
 import { Button } from '@/shared/ui/Button/Button';
-import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
+import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import { useState } from 'react';
 import styles from './Sidebar.module.scss';
+import { LangSwitcher } from '@/features/LangSwitcher/LangSwitcher';
 
 interface SidebarProps {
 	className?: string;
@@ -19,12 +20,18 @@ export const Sidebar = ({ className }: SidebarProps) => {
 		<div
 			className={cn(styles.sidebar, [className], {[styles.collapsed]: collapsed})}
 		>
-			<Button onClick={onToogle}>toggle</Button>
+			<Button
+				className={styles.sidebarBtn}
+				onClick={onToogle}
+			>
+				{'<--'}
+			</Button>
 
-		<div className={styles.switchers}>
-			<ThemeSwitcher />
-		</div>
+			<div className={styles.switchers}>
+				<ThemeSwitcher />
+				<LangSwitcher />
+			</div>
 			
 		</div>
- );
+	);
 }

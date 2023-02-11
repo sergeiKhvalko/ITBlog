@@ -6,18 +6,23 @@ import { cn } from '@/shared/lib/cn/cn'
 import { AppRouter } from './provider/router/AppRouter'
 import { Navbar } from '@/widgets/Navbar'
 import { Sidebar } from '@/widgets/Sidebar'
+import { Suspense } from 'react'
+
 
 const App = () => {
 	const { theme } = useTheme();
 	
 	return (
 		<div className={cn('app', [theme])}>
-			<Elipses />
-			<Navbar />
-			<main className="page-content">
-				<Sidebar />
-				<AppRouter />
-			</main>
+			<Suspense fallback='loading...'>
+				<Elipses />
+				<Navbar />
+				<main className="page-content">
+					<Sidebar />
+					<AppRouter />
+				</main>
+			</Suspense>
+			
 			
 		</div>
 	)
