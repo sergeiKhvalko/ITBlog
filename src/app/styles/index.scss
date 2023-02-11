@@ -19,3 +19,12 @@ body {
 	min-height: 100vh;
 	overflow: hidden;
 }
+
+.page-content {
+	display: flex;
+}
+
+.page-wrapper {
+	flex-grow: 1;
+	padding: 20px;
+}

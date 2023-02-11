@@ -5,6 +5,7 @@ import { useTheme } from '@/shared/contexts'
 import { cn } from '@/shared/lib/cn/cn'
 import { AppRouter } from './provider/router/AppRouter'
 import { Navbar } from '@/widgets/Navbar'
+import { Sidebar } from '@/widgets/Sidebar'
 
 const App = () => {
 	const { theme } = useTheme();
@@ -12,11 +13,11 @@ const App = () => {
 	return (
 		<div className={cn('app', [theme])}>
 			<Elipses />
-
-			
-			
 			<Navbar />
-			<AppRouter />
+			<main className="page-content">
+				<Sidebar />
+				<AppRouter />
+			</main>
 			
 		</div>
 	)
