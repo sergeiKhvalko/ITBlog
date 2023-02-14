@@ -1,7 +1,7 @@
-import { cn } from '@/shared/lib/cn/cn';
-import { Link } from 'react-router-dom';
-import styles from './AppLink.module.scss';
-import { AppLinkProps, AppLinkTheme } from './AppLink.props';
+import { cn } from '@/shared/lib/cn/cn'
+import { Link } from 'react-router-dom'
+import styles from './AppLink.module.scss'
+import { AppLinkProps, AppLinkTheme } from './AppLink.props'
 
 
 export const AppLink = ({
@@ -17,5 +17,5 @@ export const AppLink = ({
 		>
 			{ children }
 		</Link>
- );
+	)
 }

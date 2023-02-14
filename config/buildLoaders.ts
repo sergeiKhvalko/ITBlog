@@ -1,6 +1,6 @@
-import { RuleSetRule } from "webpack"
-import { BuildOptions } from "./types/config"
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import { RuleSetRule } from 'webpack'
+import { BuildOptions } from './types/config'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 export const buildLoaders = ({ isDev }: BuildOptions): RuleSetRule[] => {
 
@@ -11,7 +11,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): RuleSetRule[] => {
 			loader: 'babel-loader',
 			options: {
 				presets: [
-					['@babel/preset-env', { targets: "defaults" }]
+					['@babel/preset-env', { targets: 'defaults' }]
 				],
 				plugins: [
 					[
@@ -39,7 +39,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): RuleSetRule[] => {
 			isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
 			// Translates CSS into CommonJS
 			{
-				loader: "css-loader",
+				loader: 'css-loader',
 				options: {
 					modules: {
 						auto: (resPath: string) => Boolean(resPath.includes('.module')),
@@ -50,7 +50,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): RuleSetRule[] => {
 				}
 			},
 			// Compiles Sass to CSS
-			"sass-loader",
+			'sass-loader',
 		],
 	}
 
