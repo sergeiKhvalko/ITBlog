@@ -3,8 +3,7 @@
 	height: calc(100vh - var(--navbar-height));
 	padding: 20px;
 	position: relative;
-
-	background: rgba(105, 114, 205, 0.05);
+	background: rgb(105 114 205 / 5%);
 	transition: width 0.3s;
 }
 
@@ -26,8 +25,6 @@
 	top: 50%;
 	right: 0;
 	transform: translate(50%, -50%);
-
 	padding: 10px;
-
 	border-radius: 100%;
 }

@@ -7,7 +7,8 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:react/recommended',
 		'plugin:@typescript-eslint/recommended',
-		'plugin:react/jsx-runtime'
+		'plugin:react/jsx-runtime',
+		'plugin:i18next/recommended'
 	],
 	overrides: [
 	],
@@ -18,7 +19,8 @@ module.exports = {
 	},
 	plugins: [
 		'react',
-		'@typescript-eslint'
+		'@typescript-eslint',
+		'i18next'
 	],
 	rules: {
 		indent: ['error', 'tab'],
@@ -28,5 +30,6 @@ module.exports = {
 		'no-unused-vars': 'warn',
 		'react/button-has-type': 'warn',
 		'object-curly-spacing': [2, 'always'],
+		'i18next/no-literal-string': ['warn', { markupOnly: true }]
 	}
 }
