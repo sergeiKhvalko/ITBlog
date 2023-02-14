@@ -1,6 +1,5 @@
 import { Theme, useTheme } from '@/shared/contexts'
 import { cn } from '@/shared/lib/cn/cn'
-import styles from './ThemeSwitcher.module.scss'
 import { ThemeSwitcherProps } from './ThemeSwitcher.props'
 import LightIcon from '@/shared/assets/icons/sun.svg'
 import DarkIcon from '@/shared/assets/icons/moon.svg'
@@ -14,7 +13,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
 
 	return (
 		<Button
-			className={cn(styles.button, [className])}
+			className={cn('', [className])}
 			onClick={toggleTheme}
 			theme={ThemeButton.CLEAR}
 		>
