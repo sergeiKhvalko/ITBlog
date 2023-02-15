@@ -6,7 +6,8 @@ describe('classNames', () => {
 	})
 
 	test('with additional class', () => {
-		expect(cn('someClass', ['class1', 'class2'])).toBe('someClass class1 class2')
+		expect(cn('someClass', ['class1', 'class2']))
+			.toBe('someClass class1 class2')
 	})
 
 	test('with mods class', () => {

@@ -31,6 +31,7 @@ module.exports = {
 		'no-unused-vars': 'warn',
 		'react/button-has-type': 'warn',
 		'object-curly-spacing': [2, 'always'],
-		'i18next/no-literal-string': ['warn', { markupOnly: true }]
+		'i18next/no-literal-string': ['warn', { markupOnly: true }],
+		'max-len': ['error', { ignoreComments: true }]
 	}
 }
