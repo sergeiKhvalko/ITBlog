@@ -11,4 +11,4 @@ const Elipses = () => {
 	)
 }
 
-export default Elipses;
+export default Elipses

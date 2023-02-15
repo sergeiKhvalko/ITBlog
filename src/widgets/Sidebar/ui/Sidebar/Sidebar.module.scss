@@ -1,0 +1,30 @@
+.sidebar {
+	width: var(--sidebar-width);
+	height: calc(100vh - var(--navbar-height));
+	padding: 20px;
+	position: relative;
+	background: rgb(105 114 205 / 5%);
+	transition: width 0.3s;
+}
+
+.collapsed {
+	width: var(--sidebar-width-collapsed);
+}
+
+.switchers {
+	width: 100%;
+	position: absolute;
+	top: 20px;
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+}
+
+.sidebarBtn {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(50%, -50%);
+	padding: 10px;
+	border-radius: 100%;
+}

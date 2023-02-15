@@ -10,12 +10,19 @@ body {
 }
 
 .app {
-	position: relative;
 	font: var(--font-m);
-
 	background: var(--bg-color);
 	color: var(--primary-color);
-
 	min-height: 100vh;
+	position: relative;
 	overflow: hidden;
+}
+
+.page-content {
+	display: flex;
+}
+
+.page-wrapper {
+	flex-grow: 1;
+	padding: 20px;
 }

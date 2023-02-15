@@ -1,7 +1,7 @@
 import path from 'path'
-import webpack from 'webpack';
-import { BuildEnv } from './config/types/config';
-import { buildWebpackConfig } from './config/buildWebpackConfig';
+import webpack from 'webpack'
+import { BuildEnv } from './config/types/config'
+import { buildWebpackConfig } from './config/buildWebpackConfig'
 
 
 
@@ -22,8 +22,8 @@ export default (env: BuildEnv) => {
 		port,
 		paths,
 		isDev
-	});
+	})
 
-	return config;
+	return config
 }
 

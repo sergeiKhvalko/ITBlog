@@ -1,10 +1,12 @@
 
 type Mods = Record<string, string | boolean>
 
-export const cn = (cls: string, mods: Mods = {}, additional: string[] = []): string => {
+export const cn = (
+	cls: string, additional: string[] = [], mods: Mods = {}
+): string => {
 	return [
 		cls,
-		...Object.keys(mods).filter(key => mods[key] === true),
-		...additional
+		...additional.filter(Boolean),
+		...Object.keys(mods).filter(key => mods[key] === true)
 	].join(' ')
 }
