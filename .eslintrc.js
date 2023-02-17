@@ -31,7 +31,23 @@ module.exports = {
 		'no-unused-vars': 'warn',
 		'react/button-has-type': 'warn',
 		'object-curly-spacing': [2, 'always'],
-		'i18next/no-literal-string': ['warn', { markupOnly: true }],
+		'i18next/no-literal-string': [
+			'warn', { markupOnly: true, ignoreAttributes: ['data-testid'] }
+		],
 		'max-len': ['error', { ignoreComments: true }]
-	}
+	},
+
+	globals: {
+		__IS_DEV__: true
+	},
+
+	overrides: [
+		{
+			files: ['**/src/**/*.test.{ts,tsx}'],
+			rules: {
+				'i18next/no-literal-string': 'off'
+			}
+		}
+	]
+	
 }

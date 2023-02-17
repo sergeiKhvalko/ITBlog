@@ -1,4 +1,4 @@
-import { cn } from './cn'
+import { cn } from '@/shared/lib/cn/cn'
 
 describe('classNames', () => {
 	test('with only first param', () => {
