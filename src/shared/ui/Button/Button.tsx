@@ -4,7 +4,9 @@ import { ButtonProps } from './Button.props'
 
 
 
-export const Button = ({ children, className, theme, ...props }: ButtonProps) => {
+export const Button = (
+	{ children, className, theme, ...props }: ButtonProps
+) => {
 
 	return (
 		<button

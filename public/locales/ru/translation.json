@@ -4,5 +4,8 @@
   "lang": "ru",
   "Main": "Главная",
   "About": "О нас",
-  "Page not found": "Страница не найдена"
+  "Page not found": "Страница не найдена",
+  "Something went wrong": "Что-то пошло не так",
+  "Reload page": "Перезагрузить станицу",
+  "trigger an error": "вызвать ошибку"
 }
