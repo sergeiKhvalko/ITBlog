@@ -5,8 +5,11 @@ import { AppLinkProps, AppLinkTheme } from './AppLink.props'
 
 
 export const AppLink = ({
-	to, className, children,
-	theme = AppLinkTheme.PRIMARY, ...props
+	to,
+	className,
+	children,
+	theme = AppLinkTheme.PRIMARY,
+	...props
 }: AppLinkProps) => {
 
 	return (
