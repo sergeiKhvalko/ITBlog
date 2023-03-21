@@ -1,3 +1,4 @@
+/* stylelint-disable color-function-notation */
 .modal {
 	position: fixed;
 	inset: 0;
@@ -10,7 +11,7 @@
 .modal.dark {
 	--tw-bg-opacity: 1;
 	--bg-color: rgb(40 40 40 / var(--tw-bg-opacity));
-	--primary-color: rgb (255, 255, 255);
+	--primary-color: rgb(255, 255, 255);
 }
 
 .modal.light {
