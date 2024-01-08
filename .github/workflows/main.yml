@@ -1,4 +1,7 @@
 name: linting, testing, building
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
 on:
   push:
     branches: [main]
@@ -9,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [19.x]
+        node-version: [18.x]
 
     steps:
       - uses: actions/checkout@v2
