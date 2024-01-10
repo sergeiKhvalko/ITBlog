@@ -45,9 +45,9 @@ jobs:
       - name: build storybook
         run: yarn storybook:build
         if: always()
-      - name: update loki
-        run: yarn loki update
-        if: always()
+      # - name: update loki
+      #   run: yarn loki update
+      #   if: always()
       - name: screenshot testing
         run: yarn test:ui:ci
         if: always()
