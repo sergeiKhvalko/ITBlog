@@ -7,23 +7,29 @@ on:
 jobs:
   pipeline:
     runs-on: ubuntu-latest
-    # strategy:
-    #   matrix:
-    #     node-version: [18]
+    strategy:
+      matrix:
+        node-version: [18]
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-      - name: Build and push
-        uses: docker/build-push-action@v5
+        uses: actions/checkout@v4
+      # - name: Set up QEMU
+      #   uses: docker/setup-qemu-action@v3
+      # - name: Set up Docker Buildx
+      #   uses: docker/setup-buildx-action@v3
+      # - name: Build and push
+      #   uses: docker/build-push-action@v5
+      #   with:
+      #     file: Dockerfile
+      #     push: false
+      #     tags: user/app:latest
+      - name: Staring Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
         with:
-          file: Dockerfile
-          push: false
-          tags: user/app:latest
+          node-version: ${{ matrix.node-version }}
+      - name: install modules
+        run: yarn
       - name: build production project
         run: yarn build:prod
         if: always()
