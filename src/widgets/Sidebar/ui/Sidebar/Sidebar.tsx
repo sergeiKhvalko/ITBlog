@@ -1,9 +1,7 @@
 import { cn } from '@/shared/lib/cn/cn'
 import { Button } from '@/shared/ui/Button/Button'
-import { ThemeSwitcher } from '@/features/ThemeSwitcher'
 import { useState } from 'react'
 import styles from './Sidebar.module.scss'
-import { LangSwitcher } from '@/features/LangSwitcher/LangSwitcher'
 import { AppLink } from '@/shared/ui/AppLink/AppLink'
 import { useTranslation } from 'react-i18next'
 import { RoutePath } from '@/shared/router/AppRoutes'
@@ -12,7 +10,7 @@ import AboutIcon from 'shared/assets/icons/about-20-20.svg'
 import MainIcon from 'shared/assets/icons/main-20-20.svg'
 
 interface SidebarProps {
-	className?: string;
+	className?: string
 }
 
 export const Sidebar = ({ className }: SidebarProps) => {
@@ -20,18 +18,18 @@ export const Sidebar = ({ className }: SidebarProps) => {
 	const { t } = useTranslation()
 
 	const onToogle = () => {
-		setCollapsed(prev => !prev)
+		setCollapsed((prev) => !prev)
 	}
 
 	return (
 		<div
-			data-testid='sidebar'
+			data-testid="sidebar"
 			className={cn(styles.sidebar, [className], {
-				[styles.collapsed]: collapsed
+				[styles.collapsed]: collapsed,
 			})}
 		>
 			<Button
-				data-testid='sidebar-toggle'
+				data-testid="sidebar-toggle"
 				className={styles.sidebarBtn}
 				onClick={onToogle}
 			>
@@ -56,9 +54,6 @@ export const Sidebar = ({ className }: SidebarProps) => {
 					<span className={styles.link}>{t('About')}</span>
 				</AppLink>
 			</nav>
-
-			
-			
 		</div>
 	)
 }

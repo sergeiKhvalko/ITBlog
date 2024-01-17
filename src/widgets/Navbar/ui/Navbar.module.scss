@@ -1,19 +1,23 @@
 .navbar {
 	position: relative;
+
+	display: flex;
+	align-items: center;
+
 	width: 100%;
 	height: var(--navbar-height);
 	padding: 20px;
-	display: flex;
-	align-items: center;
-	background: rgb(105 114 205 / 5%);
+
+	background: rgb(105 114 205, 5%);
 }
 
 .switchers {
 	position: absolute;
 	top: 20px;
+
 	display: flex;
-	justify-content: center;
 	gap: 50px;
+	justify-content: center;
 }
 
 .loginBtn {

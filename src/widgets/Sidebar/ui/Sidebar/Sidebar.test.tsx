@@ -1,5 +1,5 @@
 import { componentRender } from '@/shared/lib/tests/componentRender/componentRender'
-import { renderWithTranslation } from '@/shared/lib/tests/renderWithTranslation'
+// import { renderWithTranslation } from '@/shared/lib/tests/renderWithTranslation'
 import { Sidebar } from '@/widgets/Sidebar/ui/Sidebar/Sidebar'
 import { fireEvent, screen } from '@testing-library/react'
 

@@ -1,13 +1,13 @@
 import { cn } from '@/shared/lib/cn/cn'
 import styles from './LangSwitcher.module.scss'
 import { useTranslation } from 'react-i18next'
-import Britain from '@/shared/assets/icons/Britain.svg'
-import Russia from '@/shared/assets/icons/Russia.svg'
-import { url } from 'inspector'
-import { ChangeEvent, EventHandler } from 'react'
+// import Britain from '@/shared/assets/icons/Britain.svg'
+// import Russia from '@/shared/assets/icons/Russia.svg'
+// import { url } from 'inspector'
+import { ChangeEvent } from 'react'
 
 interface LangSwitcherProps {
-	className?: string;
+	className?: string
 }
 
 export const LangSwitcher = ({ className }: LangSwitcherProps) => {
@@ -28,5 +28,4 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
 			<option value="ru">ru</option>
 		</select>
 	)
-
 }
