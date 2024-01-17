@@ -3,28 +3,27 @@ import webpack, { RuleSetRule } from 'webpack'
 import { buildCssLoader } from '../build/loaders/buildCssLoader'
 import { BuildPaths } from '../build/types/config'
 
-export default ({ config }: { config: webpack.Configuration}) => {
+export default ({ config }: { config: webpack.Configuration }) => {
 	const paths: BuildPaths = {
 		build: '',
 		html: '',
 		entry: '',
-		src: path.resolve(__dirname, '..', '..', 'src')
+		src: path.resolve(__dirname, '..', '..', 'src'),
 	}
 	config.resolve?.modules?.push(paths.src)
 	config.resolve?.extensions?.push('.ts', '.tsx')
 
-	
 	config.resolve = {
 		...config.resolve,
 		alias: { '@': paths.src },
 	}
 
-	
 	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-	config.module!.rules = config.module!.rules!
-		.map((rule: RuleSetRule | '...') => {
+	config.module!.rules = config.module!.rules!.map(
+		(rule: RuleSetRule | '...') => {
 			if (
-				rule !== '...' &&
+				rule &&
+				typeof rule !== 'string' &&
 				rule.test instanceof RegExp &&
 				rule.test.toString().includes('svg')
 			) {
@@ -32,7 +31,8 @@ export default ({ config }: { config: webpack.Configuration}) => {
 			}
 
 			return rule
-		})
+		},
+	)
 
 	config.module?.rules?.push({
 		test: /\.svg$/,
@@ -40,6 +40,6 @@ export default ({ config }: { config: webpack.Configuration}) => {
 	})
 
 	config.module?.rules?.push(buildCssLoader(true))
-	
+
 	return config
 }

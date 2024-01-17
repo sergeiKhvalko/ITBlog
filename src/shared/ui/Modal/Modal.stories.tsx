@@ -1,28 +1,37 @@
-import React from 'react'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { Modal } from '@/shared/ui/Modal/Modal'
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from '@/shared/contexts/theme-context/ThemeContext'
 
-export default {
+const meta = {
 	title: 'shared/Modal',
 	component: Modal,
+	// parameters: {
+	// 	layout: 'centered',
+	// },
+	tags: ['autodocs'],
 	argTypes: {
 		backgroundColor: { control: 'color' },
 	},
-} as ComponentMeta<typeof Modal>
+} as Meta<typeof Modal>
 
-const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />
+export default meta
 
-export const Primary = Template.bind({})
-Primary.args = {
-	isOpen: true,
-	children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, ut.\n ',
+type Story = StoryObj<typeof meta>
+
+export const ModalDark: Story = {
+	args: {
+		isOpen: true,
+		children:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, ut.\n ',
+	},
 }
 
-export const Dark = Template.bind({})
-Dark.args = {
-	isOpen: true,
-	children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, ut.\n ',
+export const ModalLight: Story = {
+	args: {
+		isOpen: true,
+		children:
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, ut.\n ',
+	},
+	decorators: [ThemeDecorator(Theme.LIGHT)],
 }
-Dark.decorators = [ThemeDecorator(Theme.DARK)]

@@ -1,24 +1,25 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-
+import type { Meta, StoryObj } from '@storybook/react'
 import { PageError } from './PageError'
 import { Theme } from '@/shared/contexts'
-import { ThemeDecorator } from
-	'@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 
-export default {
-	title: 'widget/ErrorPage',
+const meta = {
+	title: 'widget/PageError',
 	component: PageError,
 	argTypes: {
 		backgroundColor: { control: 'color' },
 	},
-} as ComponentMeta<typeof PageError>
+} as Meta<typeof PageError>
 
-// eslint-disable-next-line max-len
-const Template: ComponentStory<typeof PageError> = () => <PageError/>
+export default meta
 
-export const Light = Template.bind({})
-Light.args = {}
+type Story = StoryObj<typeof meta>
 
-export const Dark = Template.bind({})
-Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+export const Dark: Story = {
+	args: {},
+}
+
+export const Light: Story = {
+	args: {},
+	decorators: [ThemeDecorator(Theme.LIGHT)],
+}

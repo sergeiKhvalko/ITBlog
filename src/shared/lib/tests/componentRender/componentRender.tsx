@@ -1,23 +1,43 @@
-import { ReactNode } from 'react'
-import { render } from '@testing-library/react'
-import { I18nextProvider } from 'react-i18next'
+import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider'
 import i18nForTests from '@/shared/config/i18n/i18nForTests'
+import { Theme, ThemeProvider } from '@/shared/contexts'
+import { render } from '@testing-library/react'
+import { ReactNode } from 'react'
+import { I18nextProvider } from 'react-i18next'
 import { MemoryRouter } from 'react-router-dom'
 
-export interface componentRenderOptions {
-    route?: string;
+import '@/app/styles/index.scss'
+import { DeepPartial } from '@/shared/types/deepPartial'
+
+interface componentRenderOptions {
+	route?: string
+	initialState?: DeepPartial<StateSchema>
+	theme?: Theme
 }
 
-export function componentRender(component: ReactNode, options: componentRenderOptions = {}) {
-	const {
-		route = '/',
-	} = options
+interface TestProviderProps {
+	children: ReactNode
+	options?: componentRenderOptions
+}
+function TestProvider({ children, options = {} }: TestProviderProps) {
+	const { route = '/', initialState, theme = Theme.DARK } = options
 
-	return render(
+	return (
 		<MemoryRouter initialEntries={[route]}>
-			<I18nextProvider i18n={i18nForTests}>
-				{component}
-			</I18nextProvider>
+			<StoreProvider initialState={initialState as StateSchema}>
+				<I18nextProvider i18n={i18nForTests}>
+					<ThemeProvider initialTheme={theme}>
+						<div className={`app ${theme}`}>{children}</div>
+					</ThemeProvider>
+				</I18nextProvider>
+			</StoreProvider>
 		</MemoryRouter>
 	)
+}
+
+export function componentRender(
+	component: ReactNode,
+	options: componentRenderOptions = {},
+) {
+	return render(<TestProvider options={options}>{component}</TestProvider>)
 }

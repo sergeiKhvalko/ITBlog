@@ -1,23 +1,25 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-
-import { ThemeDecorator } from
-	'@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import type { Meta, StoryObj } from '@storybook/react'
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Sidebar } from './Sidebar'
 import { Theme } from '@/shared/contexts'
 
-export default {
+const meta = {
 	title: 'widget/Sidebar',
 	component: Sidebar,
 	argTypes: {
 		backgroundColor: { control: 'color' },
 	},
-} as ComponentMeta<typeof Sidebar>
+} as Meta<typeof Sidebar>
 
-const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />
+export default meta
 
-export const Light = Template.bind({})
-Light.args = {}
+type Story = StoryObj<typeof meta>
 
-export const Dark = Template.bind({})
-Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+export const SidebarDark: Story = {
+	args: {},
+}
+
+export const SidebarLight: Story = {
+	args: {},
+	decorators: [ThemeDecorator(Theme.LIGHT)],
+}
