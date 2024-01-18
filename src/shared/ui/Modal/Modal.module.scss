@@ -6,21 +6,20 @@
 	z-index: -1;
 	inset: 0;
 
-	color: var(--primary-color);
+	color: var(--modal-text-color);
 
 	opacity: 0;
 }
 
-.modal.dark {
-	--tw-bg-opacity: 1;
-	--bg-color: rgb(40 40 40 / var(--tw-bg-opacity));
-	--primary-color: rgb(255, 255, 255);
-}
+// .modal.app_dark_theme {
+	// --bg-color: 
+	// --primary-color: rgb(255, 255, 255);
+// }
 
-.modal.light {
-	--bg-color: #e8e8ea;
-	--primary-color: #7376ff;
-}
+// .modal.app_light_theme {
+// 	--bg-color: #e8e8ea;
+// 	--primary-color: #7376ff;
+// }
 
 .overlay {
 	display: grid;
@@ -38,7 +37,7 @@
 	max-width: 60%;
 	padding: 20px;
 
-	background: var(--bg-color);
+	background: var(--modal-bg);
 	border-radius: 12px;
 
 	transition: 0.3s transform;

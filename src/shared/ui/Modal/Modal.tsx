@@ -1,4 +1,4 @@
-import { useTheme } from '@/shared/contexts'
+// import { useTheme } from '@/shared/contexts'
 import { cn } from '@/shared/lib/cn/cn'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Portal } from '@/shared/ui/Portal/Portal'
@@ -12,7 +12,7 @@ export const Modal = (props: ModalProps) => {
 
 	const [isClosing, setIsClosing] = useState(false)
 	const timerRef = useRef<ReturnType<typeof setTimeout>>()
-	const { theme } = useTheme()
+	// const { theme } = useTheme()
 
 	const closeHandler = useCallback(() => {
 		if (onClose) {
@@ -47,7 +47,6 @@ export const Modal = (props: ModalProps) => {
 	const mods: Record<string, boolean> = {
 		[styles.opened]: isOpen,
 		[styles.isClosing]: isClosing,
-		[styles[theme]]: true,
 	}
 
 	return (
