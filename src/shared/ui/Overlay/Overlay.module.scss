@@ -1,12 +1,15 @@
 .Overlay {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	inset: 0;
-	background-color: var(--overlay-color);
 	cursor: pointer;
+
+	position: fixed;
 	z-index: var(--overlay-z-index);
+	inset: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: var(--overlay-color);
 }
 
 // .overlay {

@@ -1,10 +1,12 @@
 .InputWrapper {
     display: flex;
     align-items: center;
-    border-radius: 48px;
-    padding: 8px 16px;
-    border: 2px solid var(--primary-color);
+
     width: 100%;
+    padding: 8px 16px;
+
+    border: 2px solid var(--primary-color);
+    border-radius: 48px;
 }
 
 .s {
@@ -41,11 +43,13 @@
 }
 
 .input {
+	width: 100%;
+
+	color: #dbdbdb;
+
+	background: none;
 	border: none;
 	outline: none;
-	width: 100%;
-	color: #dbdbdb;
-	background: none;
 
 	&::placeholder {
 		color: #555;
