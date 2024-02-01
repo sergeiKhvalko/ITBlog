@@ -5,4 +5,5 @@ export interface ModalProps {
 	children?: ReactNode
 	isOpen?: boolean
 	onClose?: () => void
+	lazy?: boolean
 }

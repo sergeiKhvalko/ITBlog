@@ -1,6 +1,9 @@
 {
   "About": "",
   "AboutPage": "",
+  "Auth form": "",
+  "Enter password": "",
+  "Enter username": "",
   "Log in": "",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Atque, ut": {
@@ -12,6 +15,7 @@
   "Page not found": "",
   "Reload page": "",
   "Something went wrong": "",
+  "Uncorrect username or password": "",
   "cause an error": "",
   "trigger an error": ""
 }

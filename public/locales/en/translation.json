@@ -1,12 +1,17 @@
 {
-  "Welcome to React": "Welcome to React",
-  "Translate": "Translate",
-  "lang": "en",
-  "Main": "Main",
-  "About": "About",
-  "Page not found": "Page not found",
-  "Something went wrong": "Something went wrong",
-  "Reload page": "Reload page",
-  "trigger an error": "trigger an error",
-  "Log in": "Log in"
+	"Welcome to React": "Welcome to React",
+	"Translate": "Translate",
+	"lang": "en",
+	"Main": "Main",
+	"About": "About",
+	"Page not found": "Page not found",
+	"Something went wrong": "Something went wrong",
+	"Reload page": "Reload page",
+	"trigger an error": "trigger an error",
+	"Log in": "Log in",
+	"Logout": "Logout",
+	"Enter username": "Enter username",
+	"Enter password": "Enter password",
+	"Auth form": "Auth form",
+	"Uncorrect username or password": "Uncorrect username or password"
 }

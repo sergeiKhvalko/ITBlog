@@ -1,5 +1,7 @@
 /* stylelint-disable color-function-notation */
 .modal {
+	display: grid;
+	place-items: center;
 	pointer-events: none;
 
 	position: fixed;
@@ -9,6 +11,8 @@
 	color: var(--modal-text-color);
 
 	opacity: 0;
+
+	transition: opacity 0.3s, z-index 0s 0.3s;
 }
 
 // .modal.app_dark_theme {
@@ -21,15 +25,7 @@
 // 	--primary-color: #7376ff;
 // }
 
-.overlay {
-	display: grid;
-	place-items: center;
 
-	width: 100%;
-	height: 100%;
-
-	background: var(--overlay-color);
-}
 
 .content {
 	transform: scale(0.5);
@@ -49,6 +45,8 @@
 	z-index: var(--modal-z-index);
 
 	opacity: 1;
+
+	transition: opacity 0.3s, z-index 0s;
 
 	.content {
 		transform: scale(1);

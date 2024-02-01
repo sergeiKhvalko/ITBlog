@@ -11,7 +11,7 @@ const App = () => {
 	// const { theme } = useTheme()
 
 	return (
-		<div className={cn('app')}>
+		<div id="app" className={cn('app')}>
 			<Suspense fallback="">
 				<Elipses />
 				<Navbar />

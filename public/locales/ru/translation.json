@@ -1,12 +1,17 @@
 {
-  "Welcome to React": "Тестовый пример",
-  "Translate": "Перевести",
-  "lang": "ru",
-  "Main": "Главная",
-  "About": "О нас",
-  "Page not found": "Страница не найдена",
-  "Something went wrong": "Что-то пошло не так",
-  "Reload page": "Перезагрузить станицу",
-  "trigger an error": "вызвать ошибку",
-  "Log in": "Войти"
+	"Welcome to React": "Тестовый пример",
+	"Translate": "Перевести",
+	"lang": "ru",
+	"Main": "Главная",
+	"About": "О нас",
+	"Page not found": "Страница не найдена",
+	"Something went wrong": "Что-то пошло не так",
+	"Reload page": "Перезагрузить станицу",
+	"trigger an error": "вызвать ошибку",
+	"Log in": "Войти",
+	"Logout": "Выйти",
+	"Enter username": "Введите username",
+	"Enter password": "Введите пароль",
+	"Auth form": "Форма авторизации",
+	"Uncorrect username or password": "Вы ввели неверный логин или пароль"
 }
